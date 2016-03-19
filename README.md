@@ -1,7 +1,7 @@
 # YombOCR
 Reconocedor de tipografía del ZX Spectrum
 
-GPL v3 --- Juan José Luna Espinosa juanjoluna@gmail.com
+GPL v3 --- Juan José Luna Espinosa juanjoluna at gmail.com
 
 
 ## Qué es y qué hace
