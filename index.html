@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YombOCR: Lee texto desde imágenes con la tipografía del Spectrum.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <canvas id="canvasPresentacion" width="800" height="600"></canvas>
+        
+        <div class="panelHerramientas" id="divPanelHerramientas">
+            
+            <a href="http://github.com/yomboprime/YombOCR">Ayuda y acerca de</a>
+            <br>
+
+            <label>Cargar imagen: </label>
+            <div class="divmargen">
+                <button id="botonCargarImagen">Cargar imagen desde fichero...</button>
+                <br>
+                <label>Imagen actual: </label>
+                <label id="labelNombreImagen"></label>
+            </div>
+
+            <label>Visualización: </label>
+            <div class="divmargen">
+                <label for="editZoom">Zoom:</label>
+                <input type="text" id="editZoom" value="1"/>
+                <br>
+                <label for="selectMostrar">Mostrar: </label>
+                <select id="selectMostrar">
+                    <option selected value="0">Imagen original</option>
+                    <option value="1">Imagen filtrada</option>
+                </select>
+            </div>
+
+            <br>
+            <label>Filtrado imagen: </label>
+            <div class="divmargen">
+                <label for="editUmbralR">Umbral Rojo (1..254):</label>
+                <input type="text" id="editUmbralR" value="175"/>
+                <br>
+                <label for="editUmbralG">Umbral Verde (1..254):</label>
+                <input type="text" id="editUmbralG" value="175"/>
+                <br>
+                <label for="editUmbralB">Umbral Azul (1..254):</label>
+                <input type="text" id="editUmbralB" value="175"/>
+                <br>
+
+                <button id="botonFiltrarImagen">Filtrar Imagen</button>
+            </div>
+
+            <br>
+            <label>Análisis de imagen: </label>
+            <div class="divmargen">
+                <button id="botonAnalizarBlobs">Analizar Imagen</button>
+                <br>
+                <label>Número de caracteres: </label>
+                <label id="labelNumCaracteres">0</label>
+                <br>
+                <label>Número de líneas: </label>
+                <label id="labelNumLineas">0</label>
+                <br>
+                <label>Número de caracteres no reconocidos: </label>
+                <label id="labelNumCaracteresNoReconocidos">0</label>
+                <br>
+                <label>Número(s) de línea con caracteres no reconocidos: </label>
+                <label id="labelNumLineasConCaracteresNoReconocidos"></label>
+            </div>
+            
+            <br>
+            <label>Info de carácter seleccionado: </label>
+            <div class="divmargen">
+                <label>Carácter reconocido: </label>
+                <label id="labelCaracterReconocido">---</label>
+                <br>
+                <label for="editSimboloCaracter">Símbolo ( mejor estimación): </label>
+                <input type="text" id="editSimboloCaracter" value="" size="1" maxlength="1"/>
+                <button id="botonModificarCaracter">Modificar</button>
+                <br>
+                <label>Aciertos: </label>
+                <label id="labelNumAciertosCaracter">---</label>
+                <br>
+                <label>Número de carácter: </label>
+                <label id="labelNumCaracter">---</label>
+                <br>
+                <label>Número de línea: </label>
+                <label id="labelNumLineaCaracter">---</label>
+            </div>
+
+            <br>
+            <label>Salida: </label>
+            <div class="divmargen">
+                <button id="botonReconocerCaracteres">Obtener salida de texto</button>
+                <br>
+                <label>Número(s) de línea no válidas: </label>
+                <label id="labelNumLineasConChecksumNoValido"></label>
+                <br>
+                <button id="botonComprobarTexto">Comprobar texto</button>
+                <br>
+                <br>
+                <button id="botonObtenerBinario">Obtener fichero binario</button>
+                <br>
+                <label>Salida: </label>
+                <br>
+                <textarea id="areaTextSalida" rows="32" cols="32">El código saldrá aquí</textarea>
+            </div>
+
+        </div>
+        
+        <div id="divmascaraprocesando">
+            <div id="divprocesando">
+                <label id="labelProcesando">Procesando...</label>
+            </div>
+        </div>
+
+        <input type="file" id="ficherosDeEntrada" style="display:none">
+
+        <script src="js/blobs.js"></script>
+        <script src="js/caracter.js"></script>
+        <script src="js/simbolo.js"></script>
+        <script src="js/parserCM.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
+

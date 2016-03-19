@@ -1,0 +1,49 @@
+
+.panelHerramientas {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 400px;
+    height: 90%;
+    border: 1px solid #73AD21;
+    padding: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.divmargen {
+    border: 1px solid #73AD21;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+#divmascaraprocesando {
+    cursor: wait;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+}
+#divprocesando {
+    cursor: wait;
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    top: 40%;
+    left: 30%;
+    border: 1px solid #0000FF;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#labelProcesando {
+    line-height: 5;
+    cursor: wait;
+}
+
+label {
+    background-color: #ffffff;
+}
+
+textarea {
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
