@@ -13,7 +13,7 @@ YombOCR es un programa HTML5/javascript que como entrada admite una imagen (con 
 
 - Imagen con texto en letra de tipografia spectrum, con un listado C/M (código máquina) al estilo de MicroHobby.
 - Cada línea debe tener el formato
-    <número de línea en decimal> <20 caracteres hexadecimales> <checksum en decimal>
+    - `<número de línea en decimal> <20 caracteres hexadecimales> <checksum en decimal>`
 - Imagen nítida idealmente escaneada a 600 dpi (los caracteres han de tener 32 pixels al menos), limpio  otros textos, líneas o manchas grandes (pequeños puntos son factibles)
 - Letras negras sobre fondo de color plano (no importan los puntos diminutos de colores de la imprenta)
 - Texto alineado con la horizontal y vertical (aunque se admite un poco de inclinación)
