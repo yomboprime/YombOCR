@@ -219,7 +219,7 @@ botonObtenerBinario.addEventListener( "click", function() {
         return;
     }
 
-    if ( resultParse.lineasInvalidas.lenth !== 0 ) {
+    if ( resultParse.lineasInvalidas !== null && resultParse.lineasInvalidas.length !== 0 ) {
         alert( "La salida de texto contiene líneas no válidas. Estas líneas se omitirán en el fichero. Si lo desea puede corregir la salida de texto y volver a intentarlo.");
     }
 
